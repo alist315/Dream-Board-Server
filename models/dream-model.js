@@ -10,4 +10,4 @@ const Dream = new Schema(
     },
 )
 
-module.exports = mongoose.model('dreams', Dream)
+module.exports = mongoose.model('dreams', Dream);

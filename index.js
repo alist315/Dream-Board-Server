@@ -3,6 +3,7 @@ const bodyParser = require('body-parser')
 const cors = require('cors')
 
 const db = require('./db')
+const dreamRouter = require('./routes/dream-router')
 
 const app = express()
 const apiPort = 3000
@@ -17,4 +18,6 @@ app.get('/', (req, res) => {
     res.send('Hello World!')
 })
 
-app.listen(apiPort, () => console.log(`Server running on port ${apiPort}`))
+app.use('/api', dreamRouter)
+
+app.listen(apiPort, () => console.log('Server running on port ${apiPort}'));
