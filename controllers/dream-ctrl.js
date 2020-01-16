@@ -53,6 +53,7 @@ updateDream = async (req, res) => {
         dream.type = body.type
         dream.pic = body.pic
         dream.location = body.location
+        dream.achieved = body.achieved
         dream
             .save()
             .then(() => {
